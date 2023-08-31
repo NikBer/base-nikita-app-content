@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "base-nikita-app-content"
+client_id = "5e693aba73bf47d63073968907cfa137"
+application_url = "https://pc-letting-electrical-phoenix.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://pc-letting-electrical-phoenix.trycloudflare.com/auth/callback",
+  "https://pc-letting-electrical-phoenix.trycloudflare.com/auth/shopify/callback",
+  "https://pc-letting-electrical-phoenix.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "testatikin.myshopify.com"
