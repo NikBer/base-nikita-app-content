@@ -2,7 +2,7 @@
 
 name = "base-nikita-app-content"
 client_id = "5e693aba73bf47d63073968907cfa137"
-application_url = "https://pc-letting-electrical-phoenix.trycloudflare.com"
+application_url = "https://skip-starter-cancellation-layout.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://pc-letting-electrical-phoenix.trycloudflare.com/auth/callback",
-  "https://pc-letting-electrical-phoenix.trycloudflare.com/auth/shopify/callback",
-  "https://pc-letting-electrical-phoenix.trycloudflare.com/api/auth/callback"
+  "https://skip-starter-cancellation-layout.trycloudflare.com/auth/callback",
+  "https://skip-starter-cancellation-layout.trycloudflare.com/auth/shopify/callback",
+  "https://skip-starter-cancellation-layout.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

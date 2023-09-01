@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store_ID: 1
+  keywords: MyString
+  date_modified: 2023-09-01 11:53:46
+
+two:
+  store_ID: 1
+  keywords: MyString
+  date_modified: 2023-09-01 11:53:46

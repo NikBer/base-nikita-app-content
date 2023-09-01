@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post_ID: 1
+  store: one
+  date_created: 2023-09-01 10:10:56
+  published: false
+  content: MyText
+  prompt_id: 1
+  title: MyString
+  prompt_id_title: MyString
+  summary: MyText
+  prompt_id_summary: MyText
+
+two:
+  post_ID: 1
+  store: two
+  date_created: 2023-09-01 10:10:56
+  published: false
+  content: MyText
+  prompt_id: 1
+  title: MyString
+  prompt_id_title: MyString
+  summary: MyText
+  prompt_id_summary: MyText
