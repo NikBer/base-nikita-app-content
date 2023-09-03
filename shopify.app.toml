@@ -2,7 +2,7 @@
 
 name = "base-nikita-app-content"
 client_id = "5e693aba73bf47d63073968907cfa137"
-application_url = "https://ghana-eyes-batteries-consent.trycloudflare.com"
+application_url = "https://sheffield-push-fabrics-popular.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://ghana-eyes-batteries-consent.trycloudflare.com/auth/callback",
-  "https://ghana-eyes-batteries-consent.trycloudflare.com/auth/shopify/callback",
-  "https://ghana-eyes-batteries-consent.trycloudflare.com/api/auth/callback"
+  "https://sheffield-push-fabrics-popular.trycloudflare.com/auth/callback",
+  "https://sheffield-push-fabrics-popular.trycloudflare.com/auth/shopify/callback",
+  "https://sheffield-push-fabrics-popular.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
