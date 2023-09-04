@@ -34,5 +34,10 @@
     },
     "title": "Product Counter",
     "totalProductsHeading": "TOTAL PRODUCTS"
-  }
+  },
+
+  "TriggerBlogIdFetcherButton": "Trigger Blog ID Fetcher",
+"TriggerBlogPostJobButton": "Trigger Blog Post Job",
+"TriggerFetchShopifyDataWorkerButton": "Trigger Fetch Shopify Data Worker"
+
 }

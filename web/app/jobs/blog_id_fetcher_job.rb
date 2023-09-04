@@ -1,5 +1,4 @@
-class BlogIdFetcherJob
-    include Sidekiq::Job
+class BlogIdFetcherJob < ActiveJob::Base
   
     def perform(store_id)
       # Find the store

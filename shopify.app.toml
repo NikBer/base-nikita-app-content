@@ -2,18 +2,18 @@
 
 name = "base-nikita-app-content"
 client_id = "5e693aba73bf47d63073968907cfa137"
-application_url = "https://sheffield-push-fabrics-popular.trycloudflare.com"
+application_url = "https://dialog-ever-thumbnails-judge.trycloudflare.com"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products,read_content,write_content,read_inventory,read_orders,read_products"
 
 [auth]
 redirect_urls = [
-  "https://sheffield-push-fabrics-popular.trycloudflare.com/auth/callback",
-  "https://sheffield-push-fabrics-popular.trycloudflare.com/auth/shopify/callback",
-  "https://sheffield-push-fabrics-popular.trycloudflare.com/api/auth/callback"
+  "https://dialog-ever-thumbnails-judge.trycloudflare.com/auth/callback",
+  "https://dialog-ever-thumbnails-judge.trycloudflare.com/auth/shopify/callback",
+  "https://dialog-ever-thumbnails-judge.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

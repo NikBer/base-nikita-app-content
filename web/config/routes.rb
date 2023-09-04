@@ -16,4 +16,9 @@ Rails.application.routes.draw do
 
   # Any other routes will just render the react app
   match "*path" => "home#index", via: [:get, :post]
+
+  post '/api/trigger_blog_id_fetcher', to: 'jobs#trigger_blog_id_fetcher'
+  post '/api/trigger_blog_post_job', to: 'jobs#trigger_blog_post_job'
+  post '/api/trigger_fetch_shopify_data_worker', to: 'jobs#trigger_fetch_shopify_data_worker'
+
 end

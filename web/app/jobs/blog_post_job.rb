@@ -1,5 +1,4 @@
-class BlogPostJob
-  include Sidekiq::Job
+class BlogPostJob < ActiveJob::Base
   def perform(store_id)
     # Use the store_id to fetch data specific to this store
     orchestrator_service = OrchestratorService.new

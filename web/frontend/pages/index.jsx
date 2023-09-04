@@ -7,6 +7,7 @@ import {
   Stack,
   Link,
   Text,
+  Button,
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { useTranslation, Trans } from "react-i18next";
@@ -17,6 +18,42 @@ import { ProductsCard } from "../components";
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const handleBlogIdFetcherJobTrigger = async () => {
+    try {
+        const response = await fetch('/api/trigger_blog_id_fetcher', { method: 'POST' });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        alert('Blog ID Fetcher Job Triggered Successfully!');
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error.message);
+    }
+};
+
+const handleBlogPostJobTrigger = async () => {
+    try {
+        const response = await fetch('/api/trigger_blog_post_job', { method: 'POST' });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        alert('Blog Post Job Triggered Successfully!');
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error.message);
+    }
+};
+
+const handleFetchShopifyDataWorkerTrigger = async () => {
+    try {
+        const response = await fetch('/api/trigger_fetch_shopify_data_worker', { method: 'POST' });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        alert('Fetch Shopify Data Worker Triggered Successfully!');
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error.message);
+    }
+};
+
   return (
     <Page narrowWidth>
       <TitleBar title={t("HomePage.title")} primaryAction={null} />
@@ -87,6 +124,12 @@ export default function HomePage() {
         <Layout.Section>
           <ProductsCard />
         </Layout.Section>
+        <Layout.Section>
+  <Button onClick={handleBlogIdFetcherJobTrigger}>Trigger Blog ID Fetcher</Button>
+  <Button onClick={handleBlogPostJobTrigger}>Trigger Blog Post Job</Button>
+  <Button onClick={handleFetchShopifyDataWorkerTrigger}>Trigger Fetch Shopify Data Worker</Button>
+</Layout.Section>
+
       </Layout>
     </Page>
   );

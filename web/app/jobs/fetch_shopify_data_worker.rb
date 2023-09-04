@@ -1,7 +1,6 @@
 # app/workers/fetch_shopify_data_worker.rb
 
-class FetchShopifyDataWorker
-    include Sidekiq::Job
+class FetchShopifyDataWorker < ActiveJob::Base
   
     def perform
       Store.find_each do |store|
