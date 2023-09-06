@@ -3,8 +3,9 @@ class ShopifyApiService
     # It sets the ShopifyAPI::Base.site with the provided shop_domain and token.
     # Error handling is provided for initialization errors.
     def initialize(store_id)
-      store = Store.find(store_id)
-      ShopifyAPI::Base.site = "https://#{store.shopify_token}@#{store.shopify_domain}.myshopify.com/admin"
+      shop = Shop.find(store_id)
+      @client = ShopifyAPI::Clients::Rest::Admin.new(session: shop.shopify_token)      
+      
     rescue => e
       Rails.logger.error("Error initializing ShopifyAPIService for store ID #{store_id}: #{e.message}")
     end
@@ -17,16 +18,13 @@ class ShopifyApiService
       products = []
       page = 1
       loop do
-        current_products = ShopifyAPI::Product.find(:all, params: { limit: 250, page: page })
+        response = @client.get(path: "products", query: { limit: 250 })
         
-        # Break the loop if no more products are returned
-        break if current_products.blank?
-  
-        # Add the fetched products to the products array
-        products += current_products
-  
-        # Increment the page number for the next API call
-        page += 1
+        break unless response.body.present?
+        products += response.body
+        break unless response.next_page_info
+        response = @client.get(path: "products", query: { limit: 250, page_info: response.next_page_info })
+        
       end
       products
     rescue => e
@@ -43,16 +41,13 @@ class ShopifyApiService
       orders = []
       page = 1
       loop do
-        current_orders = ShopifyAPI::Order.find(:all, params: { limit: 250, page: page })
+        response = @client.get(path: "orders", query: { limit: 250 })
         
-        # Break the loop if no more orders are returned
-        break if current_orders.blank?
-  
-        # Add the fetched orders to the orders array
-        orders += current_orders
-  
-        # Increment the page number for the next API call
-        page += 1
+        break unless response.body.present?
+        orders += response.body
+        break unless response.next_page_info
+        response = @client.get(path: "orders", query: { limit: 250, page_info: response.next_page_info })
+        
       end
   
       # Map over the fetched orders to construct sales data

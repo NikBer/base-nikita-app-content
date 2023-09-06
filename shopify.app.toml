@@ -2,7 +2,7 @@
 
 name = "base-nikita-app-content"
 client_id = "5e693aba73bf47d63073968907cfa137"
-application_url = "https://dialog-ever-thumbnails-judge.trycloudflare.com"
+application_url = "https://growing-cancellation-bl-bigger.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products,read_content,write_content,read_inventory,read_orders,r
 
 [auth]
 redirect_urls = [
-  "https://dialog-ever-thumbnails-judge.trycloudflare.com/auth/callback",
-  "https://dialog-ever-thumbnails-judge.trycloudflare.com/auth/shopify/callback",
-  "https://dialog-ever-thumbnails-judge.trycloudflare.com/api/auth/callback"
+  "https://growing-cancellation-bl-bigger.trycloudflare.com/auth/callback",
+  "https://growing-cancellation-bl-bigger.trycloudflare.com/auth/shopify/callback",
+  "https://growing-cancellation-bl-bigger.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
