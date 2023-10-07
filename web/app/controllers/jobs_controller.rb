@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
     def trigger_blog_id_fetcher
-        BlogIdFetcherJob.perform_later
+        BlogIdFetcherJob.perform_now
         render json: { status: 'success', message: 'Blog ID Fetcher Job Triggered' }, status: :ok
     end
 

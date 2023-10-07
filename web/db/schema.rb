@@ -81,15 +81,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_01_155705) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "access_scopes"
+    t.string "blog_id"
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
-  end
-
-  create_table "stores", force: :cascade do |t|
-    t.string "shopify_domain"
-    t.string "shopify_token"
-    t.integer "blog_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "featured_products", "stores"
